@@ -1,4 +1,4 @@
-import { default as logo } from './logo.svg';
+import logo from './logo.svg';
 import './App.scss';
 
 function App() {
