@@ -9,24 +9,24 @@ jobs:
 			matrix:
 				node-version: [20.x]
 		steps:
-			- uses: actions/checkout@v3
-			- uses: actions/setup-node@v3
-			  with:
-			  	node-version: "20"
-			- run: npm i
-			- run: npm run build
+		-	uses: actions/checkout@v3
+		-	uses: actions/setup-node@v3
+			with:
+			  node-version: "20"
+		- run: npm i
+		- run: npm run build
 	deploy:
 		if: github.ref == 'refs/heads/master'
 		runs-on: ubuntu-latest
 		steps:
-			- uses: actions/checkout@v3
-			  with:
-			  	sparse-checkout: |
-			  		public
-			- name: push to server
-			  uses: ssh-action@master
-			  with:
-			  	host: ${{ secrets.SERVER_IP }}
-			  	username: ${{ secrets.SERVER_USERNAME }}
-			  	password: ${{ secrets.SERVER_PASSWORD }}
-			  	script: cd ${{ secrets.PROJECT_PATH }} && git pull
+		- uses: actions/checkout@v3
+			with:
+				sparse-checkout: |
+					public
+		- name: push to server
+			uses: ssh-action@master
+			with:
+				host: ${{ secrets.SERVER_IP }}
+				username: ${{ secrets.SERVER_USERNAME }}
+				password: ${{ secrets.SERVER_PASSWORD }}
+				script: cd ${{ secrets.PROJECT_PATH }} && git pull
