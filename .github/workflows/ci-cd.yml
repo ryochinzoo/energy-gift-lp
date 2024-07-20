@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: setup-node
         uses: actions/setup-node@v3
         with:
@@ -17,13 +17,19 @@ jobs:
         run: npm i
         shell: bash
       - name: build
-        run: npm run build
+        run: npm ci && npm run build
         shell: bash
+        env:
+          PUBLIC_URL: /energy-gift-lp
+      - name: upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './build'
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           sparse-checkout: |
             public
