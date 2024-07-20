@@ -19,12 +19,6 @@ jobs:
       - name: build
         run: npm ci && npm run build
         shell: bash
-        env:
-          PUBLIC_URL: /energy-gift-lp
-      - name: upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: './build'
       - name: Copy folder content recursively to vps
         uses: garygrossgarten/github-action-scp@release
         with:
