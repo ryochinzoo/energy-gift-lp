@@ -1,0 +1,26 @@
+{   
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    },
+    "compileOnSave": true,
+    "compilerOptions": {
+        "baseUrl": ".",
+        "allowJs": true,
+        "paths": {
+            "@assets/*": [
+                "src/assets/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ]
+        },
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "react"
+    },
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+}

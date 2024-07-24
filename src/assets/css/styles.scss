@@ -1,0 +1,123 @@
+@use 'setting' as s;
+@use 'sass:math';
+
+//snippet
+.aaa {
+    background-color: s.$background-light-gray;
+    margin: 0 math.div(22.4, 2);
+    @include s.mq(md) {
+
+    }
+}
+.hero {
+
+}
+.service  {
+    padding: 0 15%;
+}
+.contents {
+    &-wrapper {
+        max-width: s.$max-width;
+        margin: s.$margin-center;
+    }
+    &-bg-colored {
+        background-color: s.$background-light-gray;
+    }
+}
+.accordion {
+    background-color: s.$background-dark-gray;
+    margin: s.$margin-center 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    &-arrow {
+        top: 50%;
+        position: absolute;
+        right: 25px;
+        width: 33px;
+        height: 33px;
+        border-top: 3px solid s.$arrow-border-color;
+        border-right: 3px solid s.$arrow-border-color;
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
+        transition-duration: .3s;
+        &.is-open {
+            -webkit-transform: translateY(-50%) rotate(135deg);
+            transform: translateY(-50%) rotate(135deg);
+        }
+    }
+    &-npo-wrapper {
+        padding: math.div(59px, 2) 77px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        .org-name {
+            font-size: 22px;
+            padding: 0 25px;
+        }
+        .activity-headline {
+            font-size: 28px;
+            font-weight: bold;
+            padding: 0 25px;
+        }
+        
+        &-contents {
+            padding: 0 8%;
+            visibility: hidden;
+            overflow: hidden;
+            height: 0;
+            transition: all 0.3s;
+            position: relative;
+            &.is-open {
+                padding: 0 8% 20px;
+                visibility: visible;
+                height: auto;
+                transition: all 0.3s;
+            }
+            .contents-wrapper {
+                display: flex;
+                gap: 0 20px;
+                font-size: 20px;
+                .images {
+                    min-width: 310px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px 0;
+                }
+            }
+            .activity-wrapper {
+                margin: 40px 0 20px;
+                .sub-headline {
+                    font-size: 28px;
+                }
+                ul li {
+                    font-size: 20px;
+                }
+            }
+            .link-wrapper {
+                display: block;
+                background-color: #fff;
+                border-radius: 20px;
+                -webkit-border-radius: 20px;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+                margin: 40px 0;
+                padding: 15px 0;
+                text-decoration: none;
+                color: s.$font-black-color;
+                width: 100%;
+                .link:after {
+                    margin: 0 0 0 6px;
+                    font-family: "Font Awesome 5 Free";
+                    content: '\f35d';
+                    font-weight: 900;
+                }
+
+            }
+        }
+    }
+    &-faq-wrapper {
+
+    }
+}
