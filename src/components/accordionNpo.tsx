@@ -11,10 +11,9 @@ type NPO = {
     link: string
 }
 
-export default function AccordionNpo(data: NPO) {
+export default function AccordionNpo(data: NPO, index: number) {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <>
             <div className='accordion'>
                 <div className='accordion-npo-wrapper'
                 onClick={(e)=>{
@@ -30,13 +29,11 @@ export default function AccordionNpo(data: NPO) {
                 </div>
                 <div className={`accordion-npo-wrapper-contents ${isOpen ? "is-open" : ""}`}>
                     <div className='contents-wrapper'>
-                        <div>{parser(data.description)}</div>
+                        <div>{ parser(data.description) }</div>
                         <div className='images'>
-                            {data.images?.map((img: string) => {
+                            {data.images?.map((img: string, idx: number) => {
                                 return (
-                                    <>
-                                        <img src={`./img/${img}`} alt={img} />
-                                    </>
+                                    <img key={idx} src={`./img/${img}`} alt={img} />
                                 )
                             })}
                         </div>
@@ -44,9 +41,9 @@ export default function AccordionNpo(data: NPO) {
                     <div className='activity-wrapper'>
                         <div className='sub-headline'>▶ 取り組み</div>
                         <ul>
-                            {data.activities.map((activity: string) => {
+                            {data.activities.map((activity: string, i: number) => {
                                 return (
-                                    <li>{ activity }</li>
+                                    <li key={i}>{ activity }</li>
                                 )
                             })}
                         </ul>
@@ -56,6 +53,5 @@ export default function AccordionNpo(data: NPO) {
                     </a>
                 </div>
             </div>
-        </>
     );
 }

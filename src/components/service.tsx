@@ -1,5 +1,6 @@
 import AccordionNpo from "./accordionNpo";
 import '../assets/css/styles.scss';
+import JSONFileNPO from '../assets/json/npo.json'; 
 
 type NPO = {
     name: string,
@@ -8,26 +9,18 @@ type NPO = {
     images?: string[],
     activities: string[],
     link: string
-};
+}
 
 export default function Service() {
-
-    const npo: NPO = {
-        name: "特定非営利活動法人 サンカクシャ",
-        activity_name: "若者支援",
-        description: "若者が安心できる人とつながり、どうありたいのかを自分なりに見つけられるように。<br />サンカクシャは、親や身近な大人を頼れない 15~25 歳くらいまでの若者が孤立せず、自立にむかえるよう、若者の社会サンカクを応援する団体です。<br /><br />生きていく意欲、何かに取り組もうとする意欲を失ってしまった若者へ丁寧に伴走し、サンカクシャの活動を通じて、若者が社会との繋がりを得て、安定した生活を送り、自分らしく生きていくことができるようサポートをしていきます。<br />また、地域や企業の大人もこの活動に「サンカク」し、若者も大人も年齢や立場、肩書きを超えて、支え合うつながりを作っていきます。",
-        images: ["npo_photo_ex_1.png", "npo_photo_ex_2.png"],
-        activities: ["テキストテキストテキストテキストテキスト",
-                     "テキストテキストテキストテキストテキストテキスト",
-                     "テキストテキストテキストテキストテキストテキストテキスト"],
-        link: ""
-    };
     return (
         <div className="service">
             <div className="contents">
                 <div className="contents-wrapper">
-                    <AccordionNpo {...npo} />
-                    <AccordionNpo {...npo} />
+                    {JSONFileNPO.data.map((npo : NPO, index : number) => {
+                        return(
+                            <AccordionNpo {...npo} key={index} />
+                        )
+                    })}
                 </div>
             </div>
         </div>
