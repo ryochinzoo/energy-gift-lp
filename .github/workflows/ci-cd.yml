@@ -17,7 +17,7 @@ jobs:
         run: yarn
         shell: bash
       - name: build
-        run: npm ci && yarn build
+        run: yarn build
         shell: bash
         env:
           CI: false
