@@ -41,8 +41,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.24.7",
     "html-webpack-plugin": "^5.6.0",
     "sass": "^1.77.8",
+    "ts-loader": "^9.5.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.4"
   }
