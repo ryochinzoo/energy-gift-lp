@@ -14,10 +14,10 @@ jobs:
           node-version: "20"
           cache: npm
       - name: install dependencies
-        run: npm i --legacy-peer-deps
+        run: yarn add
         shell: bash
       - name: build
-        run: npm ci && npm run build
+        run: npm ci && yarn build
         shell: bash
         env:
           CI: false
