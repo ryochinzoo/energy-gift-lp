@@ -4,16 +4,7 @@
     },
     "compileOnSave": true,
     "compilerOptions": {
-        "baseUrl": ".",
         "allowJs": true,
-        "paths": {
-            "@assets/*": [
-                "src/assets/*"
-            ],
-            "@components/*": [
-                "src/components/*"
-            ]
-        },
         "allowSyntheticDefaultImports": true,
         "strict": true,
         "jsx": "react-jsx",
