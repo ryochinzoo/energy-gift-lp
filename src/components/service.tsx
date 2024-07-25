@@ -17,6 +17,31 @@ export default function Service() {
             <div className="contents">
                 <div className="contents-wrapper">
                     <div className="heading">サービス内容</div>
+                    <div className="service-wrapper">
+                        <div><img src={"./img/service_graph.png"} alt="graph" /></div>
+                        <div>
+                            <ul className="service-list">
+                                <li>
+                                    <div className="title">電力コスト削減</div>
+                                    <div className="description">
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="title">電力マネジメントサポート</div>
+                                    <div className="description">
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="title">NPOに寄付</div>
+                                    <div className="description">
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <div className="sub-heading">エナジーギフトの特徴</div>
                     <div className="feature">
                         <div className="feature-wrapper">

@@ -11,6 +11,7 @@
         "strict": true,
         "jsx": "react-jsx",
         "jsxImportSource": "react",
+        "moduleResolution": "node",
         "resolveJsonModule": true
     },
     "exclude": [

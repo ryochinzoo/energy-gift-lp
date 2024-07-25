@@ -13,11 +13,11 @@ $breakpoints: (
   }
 }
 
-@mixin boldCenter($size, $marginBottom) {
+@mixin boldCenter($size, $marginBottom, $position) {
   font-size: $size;
   font-weight: bold;
   margin-bottom: $marginBottom;
-  text-align: center;
+  text-align: $position;
 }
 
 @mixin retina {

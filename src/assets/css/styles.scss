@@ -14,12 +14,60 @@
 }
 .section  {
     padding: 90px 15%;
+    &-bg-gray {
+        @extend .section;
+        background-color: s.$background-light-gray;
+    }
+    &-bg-img {
+        padding: 120px 15%;
+        background-image: url("../../../public/img/vision_bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 .heading {
-    @include s.boldCenter(40px, 100px);
+    @include s.boldCenter(40px, 80px, center);
+    &-cta {
+        @include s.boldCenter(40px, 20px, center);
+    }
+    &-vision {
+        color: #fff;
+        @include s.boldCenter(40px, 30px, center);
+    }
+    &-diff {
+        line-height: 1.2;
+        @include s.boldCenter(40px, 40px, left);
+    }
 }
 .sub-heading {
-    @include s.boldCenter(40px, 30px);
+    @include s.boldCenter(40px, 50px, center);
+    &-cta {
+        @include s.boldCenter(27px, 0px, center);
+        &-comp {
+            @include s.boldCenter(27px, 20px, center);
+        }
+    }
+}
+.footer {
+    width: 100%;
+    min-height: 287px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    background-color: s.$footer-bg-color;
+    &-img {
+        padding: 50px 0 30px;
+    }
+    &-company-name {
+        font-size: 20px;
+    }
+    &-copyright {
+        font-size: 10px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px;
+    }
 }
 .contents {
     &-wrapper {
@@ -28,6 +76,122 @@
     }
     &-bg-colored {
         background-color: s.$background-light-gray;
+    }
+    .diff {
+        &-wrapper {
+            display: flex;
+            &-left {
+                width: 50%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                img {
+                    object-fit: cover;
+                    display: block;
+                    height: 100%;
+                }
+            }
+            &-right {
+                width: 100%;
+                padding: 80px 130px;
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+                &-ceo {
+                    display: flex;
+                    margin-top: 30px;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    .ceo-title {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .vision {
+        font-size: 20px;
+        &-wrapper {
+            padding: 60px 80px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        &-title {
+            @include s.boldCenter(40px, 20px, center);
+        }
+        &-explain {
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        &-sime {
+            font-weight: bold;
+        }
+    }
+    .flow{
+        &-img {
+            object-fit: cover;
+            img {
+                width: 100%;
+            }
+        }
+        &-requirement {
+            border: 1px solid s.$arrow-border-color;
+            margin: 80px 0 20px;
+            padding: 10px 25px;
+            background-color: #fff;
+            font-size: 24px;
+            width: fit-content;
+        }
+        &-explain {
+            font-size: 20px;
+            &-mark {
+                color: s.$emphasis;
+                font-weight: bold;
+            }
+        }
+        &-note {
+            font-size: 12px;
+        }
+    }
+    .cta-button {
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        a {
+            display: block;
+        }
+    }
+    .service {
+        &-wrapper {
+            display: flex;
+            gap: 0 60px;
+            margin-bottom: 100px;
+        }
+        &-list {
+            li {
+                list-style: none;
+                margin-bottom: 50px;
+                position: relative;
+            }
+            li .title {
+                font-size: 30px;
+                margin-bottom: 5px;
+            }
+            li .description {
+                font-size: 20px;
+                line-height: 1.6;
+            }
+            li:before {
+                content: "";
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                background-color: s.$list-color;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                left: -40px;
+                top: 8px;
+            }
+        }
     }
     .feature {
         display: flex;
@@ -53,11 +217,12 @@
             transform: translateX(-50%);
         }
         &-title {
-            @include s.boldCenter(28px, 20px);
+            @include s.boldCenter(28px, 20px, center);
             margin-top: 20px;
         }
-        &-desctiption {
+        &-description {
             font-size: 20px;
+            line-height: 1.8;
         }
     }
 }
@@ -115,6 +280,7 @@
                 display: flex;
                 gap: 0 20px;
                 font-size: 20px;
+                line-height: 1.8;
                 .images {
                     min-width: 310px;
                     display: flex;
@@ -158,10 +324,6 @@
         padding: math.div(59px, 2) 58px;
         position: relative;
         cursor: pointer;
-        .org-name {
-            font-size: 22px;
-            padding: 0 25px;
-        }
         .question-headline {
             font-size: 28px;
             font-weight: bold;
@@ -185,6 +347,7 @@
                 display: flex;
                 gap: 0 10px;
                 font-size: 20px;
+                line-height: 1.8;
                 background-color: #fff;
                 padding: 20px 32px 30px;
                 .ab {
