@@ -12,8 +12,14 @@
 .hero {
 
 }
-.service  {
-    padding: 0 15%;
+.section  {
+    padding: 90px 15%;
+}
+.heading {
+    @include s.boldCenter(40px, 100px);
+}
+.sub-heading {
+    @include s.boldCenter(40px, 30px);
 }
 .contents {
     &-wrapper {
@@ -22,6 +28,37 @@
     }
     &-bg-colored {
         background-color: s.$background-light-gray;
+    }
+    .feature {
+        display: flex;
+        gap: 0 10px;
+        margin-bottom: 130px;
+        &-wrapper {
+            position: relative;
+        }
+        &-img {
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-number {
+            position: absolute;
+            font-size: 68px;
+            font-weight: bold;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &-title {
+            @include s.boldCenter(28px, 20px);
+            margin-top: 20px;
+        }
+        &-desctiption {
+            font-size: 20px;
+        }
     }
 }
 .accordion {
@@ -118,6 +155,51 @@
         }
     }
     &-faq-wrapper {
-
+        padding: math.div(59px, 2) 58px;
+        position: relative;
+        cursor: pointer;
+        .org-name {
+            font-size: 22px;
+            padding: 0 25px;
+        }
+        .question-headline {
+            font-size: 28px;
+            font-weight: bold;
+            padding: 0 25px;
+        }
+        
+        &-contents {
+            padding: 0 5%;
+            visibility: hidden;
+            overflow: hidden;
+            height: 0;
+            transition: all 0.3s;
+            position: relative;
+            &.is-open {
+                padding: 0 5% 20px;
+                visibility: visible;
+                height: auto;
+                transition: all 0.3s;
+            }
+            .contents-wrapper {
+                display: flex;
+                gap: 0 10px;
+                font-size: 20px;
+                background-color: #fff;
+                padding: 20px 32px 30px;
+                .ab {
+                    font-size: 28px;
+                    font-weight: bold;
+                    margin-right: 10px;
+                }
+                .answer {
+                    font-size: 20px;
+                    width: 100%;
+                    a {
+                        color: s.$font-black-color;
+                    }
+                }
+            }
+        }
     }
 }
