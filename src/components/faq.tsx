@@ -9,7 +9,7 @@ type FAQ = {
 
 export default function FAQArea() {
     return (
-        <div className="section">
+        <div className="section" id="faq">
             <div className="contents">
                 <div className="contents-wrapper">
                     <div className="heading">よくある質問</div>

@@ -10,7 +10,7 @@ type FAQ = {
 export default function AccordionFaq(data: FAQ) {
     const [isOpen, setIsOpen] = useState(false);
     return (
-            <div className='accordion'>
+            <div className='accordion accordion-faq'>
                 <div className='accordion-faq-wrapper'
                 onClick={(e)=>{
                     if (isOpen){
@@ -19,7 +19,8 @@ export default function AccordionFaq(data: FAQ) {
                         setIsOpen((prev) => { return true })
                     }
                 }}>
-                    <div className='question-headline'><b>Q.</b>{data.question}</div>
+                    <div className='question-headline accordion-faq-wrapper-headline'>
+                        <div className="qb">Q.</div><div>{data.question}</div></div>
                     <div className={`accordion-arrow ${isOpen ? "is-open" : ""}`}></div>
                 </div>
                 <div className={`accordion-faq-wrapper-contents ${isOpen ? "is-open" : ""}`}>

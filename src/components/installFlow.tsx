@@ -2,9 +2,9 @@ import '../assets/css/styles.scss';
 
 export default function InstallFlow(){
     return(
-        <div className='section-bg-gray'>
+        <div className='section-smallBottom section-bg-gray' id="flow">
             <div className='contents'>
-                <div className='contents-wrapper'>
+                <div className='contents-wrapper flow'>
                     <div className='heading'>導入までの流れ</div>
                     <div className='flow-img'>
                         <img src={"./img/installment_graph.png"} alt="installment_graph" />

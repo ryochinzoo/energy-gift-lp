@@ -3,13 +3,17 @@ import CTAButton from './ctaButton';
 
 export default function CTAArea(){
     return(
-        <div className='section-bg-gray'>
+        <div className='section-cta'>
             <div className='contents'>
-                <div className='sub-heading-cta'>使うだけの電気から、見える電気にすることで</div>
+                <div className='sub-heading-cta'>
+                    <span className='accent-border-big'>使うだけ</span>だった電気から、
+                    <span className='accent-border-big'>見える電気</span>にすることで</div>
                 <div className='heading-cta'>
-                    会社や社会にとって良くなる未来を<br />
-                    一緒に計画しましょう。
-                </div>
+                    <span className='accent'>
+                        <span className='accent-big'>会社</span>も<span className='accent-big'>社会</span>も</span>良くなっていきます。<br />
+                    自社にフィットするかどうか<br />
+                    調べてみませんか？
+                    </div>
                 <div className='cta-button'>
                     <CTAButton />
                 </div>

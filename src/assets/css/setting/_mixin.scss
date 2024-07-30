@@ -12,6 +12,22 @@ $breakpoints: (
     @content;
   }
 }
+@mixin section($padding) {
+  padding: $padding;
+}
+@mixin tagParts($borderColor, $bgColor, $fontColor) {
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border: 2px solid $borderColor;
+  background-color: $bgColor;
+  padding: 8px 0;
+  font-size: 26px;
+  color: $fontColor;
+  font-weight: bold;
+  width: 266px;
+  margin-bottom: 35px;
+  text-align: center;
+}
 
 @mixin boldCenter($size, $marginBottom, $position) {
   font-size: $size;
