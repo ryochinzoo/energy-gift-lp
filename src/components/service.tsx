@@ -8,10 +8,10 @@ export default function Service() {
             <div className="contents">
                 <div className="contents-wrapper">
                     <div className="heading-tag-parts center">SERVICE</div>
-                    <div className="heading">ENERGY GIFTのサービス</div>
+                    <div className="heading">ENERGY GIFT<span className='heading-sp-break'>のサービス</span></div>
                     <div className="service-wrapper">
-                        <div><img src={"./img/service_graph.png"} alt="graph" /></div>
-                        <div>
+                        <div className='service-graph-img'><img src={"./img/service_graph.png"} alt="graph" /></div>
+                        <div className='service-right'>
                             <ul className="service-list">
                                 <li>
                                     <div className="title-wrapper">
@@ -19,7 +19,7 @@ export default function Service() {
                                         <div className="title">電力状況の見直し（診断）</div>
                                     </div>
                                     <div className="description">
-                                    プランナーと電気使用状況を見直すことで 電気代が下がってコストDown
+                                    プランナーと電力使用状況を見直すことで 電気代が下がってコストDown
                                     <div className="description-small">※キュービクルなどの高圧受電設備をお持ちの法人様が対象です</div>
                                     </div>
                                 </li>
@@ -29,11 +29,11 @@ export default function Service() {
                                         <div className="title">NPOに寄付する</div>
                                     </div>
                                     <div className="description">
-                                    電力使用量 1kwhあたり0.05円をNPO団体へ寄付
+                                    電気使用量 1kWhあたり0.05円をNPO団体へ寄付
                                     <div className="description-note">
                                         寄付先について<br />
                                         寄付先は主に5つ決まっており、平均的に寄付分配します。災害時支援・地域支援などが必要なタイミングには、寄付先が１つ追加されます。
-                                        <div className="description-note-link"><img src="./img/link_icon.png" alt="link" /><a href="/">寄付先のご紹介</a></div>
+                                        <div className="description-note-link"><img src="./img/link_icon.png" alt="link" /><a href="#npo">寄付先のご紹介</a></div>
                                     </div>
                                     </div>
                                 </li>
@@ -43,7 +43,7 @@ export default function Service() {
                                         <div className="title">専門家サービス</div>
                                     </div>
                                     <div className="description">
-                                    プランナーと一緒にエネルギーマネジメントを行い、電気使用量を減らす設計ができます。
+                                    プランナーと一緒に電力量削減や運用方法を見直し、電気料金削減の計画を立案します。
                                     </div>
                                 </li>
                                 <li>

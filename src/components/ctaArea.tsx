@@ -1,5 +1,6 @@
 import '../assets/css/styles.scss';
 import CTAButton from './ctaButton';
+import CTAButtonSp from './ctaButtonSp';
 
 export default function CTAArea(){
     return(
@@ -7,15 +8,17 @@ export default function CTAArea(){
             <div className='contents'>
                 <div className='sub-heading-cta'>
                     <span className='accent-border-big'>使うだけ</span>だった電気から、
-                    <span className='accent-border-big'>見える電気</span>にすることで</div>
+                    <span className='sub-heading-sp-break'><span className='accent-border-big'>見える電気</span>にすることで</span></div>
                 <div className='heading-cta'>
-                    <span className='accent'>
-                        <span className='accent-big'>会社</span>も<span className='accent-big'>社会</span>も</span>良くなっていきます。<br />
-                    自社にフィットするかどうか<br />
-                    調べてみませんか？
+                    <span className='accent heading-sp-break'>
+                        <span className='accent-big'>会社</span>も<span className='accent-big'>社会</span>も</span>良くなる未来があります。<br /><br />
+                    まずは<span className='accent heading-sp-break'> <span className='accent-big'>御社の電力使用状況を知る</span></span>ところからはじめてみませんか？
                     </div>
                 <div className='cta-button'>
                     <CTAButton />
+                </div>
+                <div className='cta-button-sp'>                
+                    <CTAButtonSp />   
                 </div>
             </div>
         </div>

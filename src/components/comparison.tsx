@@ -1,5 +1,6 @@
 import '../assets/css/styles.scss';
 import CTAButton from './ctaButton';
+import CTAButtonSp from './ctaButtonSp';
 
 export default function Comparison(){
     return(
@@ -39,10 +40,13 @@ export default function Comparison(){
                     </div>
                     <div className='sub-heading-cta-comp'>
                         <div className='sub-heading-cta-comp-over'>＼　詳しい情報は資料掲載しております　／</div>
-                        <div className='sub-heading-cta-comp-under'>お気軽に資料請求ください。</div>
+                        <div className='sub-heading-cta-comp-under'>お気軽に資料請求<span className='sub-heading-sp-break'>ください。</span></div>
                     </div>
                     <div className='cta-button'>
                         <CTAButton />
+                    </div>
+                    <div className='cta-button-sp'>                
+                        <CTAButtonSp />   
                     </div>
                 </div>
             </div>

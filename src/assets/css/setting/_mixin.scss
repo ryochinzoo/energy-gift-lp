@@ -2,8 +2,9 @@ $breakpoints: (
   xl: 1441px,
   lg: 1200px,
   md: 1024px,
-  sm: 768px,
+  sm: 767px,
   xs: 425px,
+  xxs: 376px,
 );
 
 @mixin mq($size) {
@@ -27,6 +28,9 @@ $breakpoints: (
   width: 266px;
   margin-bottom: 35px;
   text-align: center;
+  @include mq(sm) {
+    font-size: 22px;
+  }
 }
 
 @mixin boldCenter($size, $marginBottom, $position) {
